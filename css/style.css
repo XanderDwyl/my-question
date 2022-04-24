@@ -1,0 +1,38 @@
+#main-container {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  margin: auto;
+}
+
+#main-container .container {
+  text-align: center;
+  box-shadow: 0px 2px 1px #80b7d5;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+#main-container .col {
+  text-align: center;
+} 
+
+.congrats .img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: url(../images/trophy.png) -11px -1px;
+}
+
+
+#main-container .container.bg-loss {
+  background: #f7f7f7;
+}
