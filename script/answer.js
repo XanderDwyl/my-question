@@ -31,18 +31,24 @@ const selectAnswer = (s, e) => {
   currQ.answer = s.target.value
   updateQuestion(currQ)
   const nextQ = selectedQ + 2;
+  let nextQuestion = document.getElementById(`Q${nextQ}`)
   if ((selectedQ + 1) < questions.length) {
     const nextAction = document.getElementById(`action-${nextQ}`)
     const nextStep = document.getElementById(`step-${nextQ}`)
+    nextStep.classList.add('active');
+    nextQuestion.classList.add('active')
     nextAction.removeAttribute('disabled')
     nextStep.classList.remove('disabled')
   }
   
   const currAction = document.getElementById(`action-${selectedQ + 1}`)
   currAction.setAttribute('disabled', true);
+  nextQuestion = document.getElementById(`Q${selectedQ + 1}`)
+  nextQuestion.classList.remove('active');
 
+  const currStep = document.getElementById(`step-${selectedQ + 1}`)
+  currStep.classList.remove('active')
   if(selectedQ + 1 === 1) {
-    const currStep = document.getElementById(`step-${selectedQ + 1}`)
     currStep.classList.remove('disabled')
   }
 
@@ -65,7 +71,10 @@ const selectAnswer = (s, e) => {
     }
   });
 
+  // selectedQ = Number(nextQ + 1);
   if (selectedQ >= questions.length - 1) {
     endExam()
   }
+
+  selectedQ++
 };
