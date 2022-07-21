@@ -4,4 +4,4 @@ Questionnaire App
 - CSS
 - Javascript (vanilla)
 
-[https://xanderdwyl.github.io/my-question/question.html](question)
+[https://xanderdwyl.github.io/my-question/question](question)
